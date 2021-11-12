@@ -1,0 +1,53 @@
+﻿<Page x:Class="WpfApp1.OneWayTicket"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="OneWayTicket">
+
+    <Grid>
+        <ScrollViewer Name="scroll_issue">
+            <Grid Name="one_ticket" Background="#FFE2E2E2" Margin="5,0,5,0"  >
+                <DockPanel Name="dock_issue" HorizontalAlignment="Left" LastChildFill="False" VerticalAlignment="Top" Margin="3">
+                    <Grid Name="dock_top_panel_grid" Height="30" Background="#FFFFCEA8" DockPanel.Dock="Top" Margin="3,3,25,3"/>
+                    <Grid Name="dock_title_grid" Height="60" Background="#FFFFCEA8" DockPanel.Dock="Top" Margin="3,3,25,3">
+                        <Label Name="label_tite" Content="Title" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40"/>
+                    </Grid>
+                    <Grid  Name="dock_comment_gird" Width="750" DockPanel.Dock="Bottom" Margin="3,0,25,3">
+                        <Label Content="----------Comments-----------" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Background="#FFFFB578" Margin="0,10,0,0"/>
+                        <StackPanel Name="dock_comment_text" VerticalAlignment="Top" Orientation="Vertical"/>
+                        <Grid x:Name="dock_comment_add" Background="#FFFFB578" VerticalAlignment="Bottom"/>
+                    </Grid>
+                    <StackPanel x:Name="dock_desc_gird" Width="750" Background="#FFFFCEA8" DockPanel.Dock="Bottom" Margin="3,3,25,0">
+                        <Label Content="----------Description-----------" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                        <TextBlock Name="label_description" Text="Description" Margin="3,10,40,3"/>
+                    </StackPanel>
+                    <Grid Name="dock_left_grid"  Width="500" Background="#FFFFCEA8" DockPanel.Dock="Left" Margin="3,3,3,3">
+                        <Label Content="Type:"/>
+                        <Label Name="label_type" Content="type" Margin="50,0,0,0"/>
+                        <Label Content="Status:" Margin="0,20,0,0"/>
+                        <Label Name="label_status" Content="status" Margin="50,20,0,0"/>
+                        <Label Content="Priority:" Margin="0,40,0,0"/>
+                        <Label Name="label_priority" Content="priority" Margin="50,40,0,0"/>
+                    </Grid>
+                    <Grid x:Name="dock_right_grid" Width="300" Background="#FFFFCEA8" DockPanel.Dock="Right" Margin="3,3,25,3">
+                        <Label Content="People" />
+                        <Label Content="Assignee:" Margin="10,20,0,0"/>
+                        <Label Name="label_assignee" Content="assignee" Margin="70,20,0,0"/>
+                        <Label Content="Reporter:" Margin="10,40,0,0"/>
+                        <Label Name="label_reporter" Content="reporter" Margin="70,40,0,0"/>
+                        <Label Content="Dates" Margin="0,80,0,0"/>
+                        <Label Content="Created:" Margin="10,100,0,0"/>
+                        <Label Name="label_created" Content="created" Margin="70,100,0,0"/>
+                        <Label Content="Updated:" Margin="10,120,0,0"/>
+                        <Label Name="label_updated" Content="updated" Margin="70,120,0,0"/>
+                    </Grid>
+                </DockPanel>
+
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
